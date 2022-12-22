@@ -35,8 +35,8 @@ public class App {
 
             if(ch == 'u'){
                 System.out.print("Manufacture date (DD/MM/YYYY): ");
-                // DATE MISSING //
-                Product product = new UsedProduct(name, price, null);
+                Date date = sdf.parse(sc.next());
+                Product product = new UsedProduct(name, price, date);
                 list.add(product);
             }
             else if(ch == 'i'){
@@ -50,24 +50,15 @@ public class App {
                 list.add(product);
             }
 
-            System.out.println();
-            System.out.println("PRICE TAGS:");
-            for(Product product : list){
-                System.out.println(product.priceTag());
-            }
-
-
-
-
-
-
-
-
-
+            
         }
+        
+        System.out.println();
+        System.out.println("PRICE TAGS:");
 
-
-
+        for(Product product : list){
+            System.out.println(product.priceTag());
+        }
 
         sc.close();
     }
