@@ -40,7 +40,7 @@ public class App {
                 list.add(product);
             }
             else if(ch == 'i'){
-                System.out.println("Customs fee:");
+                System.out.print("Customs fee:");
                 double customsFee = sc.nextDouble();
                 Product product = new ImportedProduct(name, price, customsFee);
                 list.add(product);

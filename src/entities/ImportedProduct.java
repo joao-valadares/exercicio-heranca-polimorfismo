@@ -27,7 +27,7 @@ public class ImportedProduct extends Product{
     @Override
     public String priceTag(){
         StringBuilder sb = new StringBuilder();
-        sb.append(name).append(" $ ").append(price).append(" (Customs fee: $ " + customsFee + ")");
+        sb.append(getName()).append(" $ ").append(totalPrice()).append(" (Customs fee: $ " + customsFee + ")");
         return sb.toString();
     }
 
